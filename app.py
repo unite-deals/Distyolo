@@ -6,7 +6,7 @@ app = Flask(__name__)
 camera = cv2.VideoCapture(0)  # Use 0 for webcam, or provide the path to a video file
 
 def load_yolo():
-    net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+    net = cv2.dnn.readNet("yolov3.cfg","yolov3.weights" )
     classes = []
     with open("coco.names", "r") as f:
         classes = [line.strip() for line in f.readlines()]
